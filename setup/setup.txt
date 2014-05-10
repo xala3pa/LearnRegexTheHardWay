@@ -1,0 +1,20 @@
+nstall Regetron simply do this:
+
+Install Python if you don't have it.
+Install PIP and distribute using http://pypi.python.org/pypi/distribute.
+Run pip install regetron
+
+How To Use Regetron
+
+How this works is you give Regetron a file or a string of data, and then you type in regular expressions (regex). You can see this when I type !data "Hello World!" to setup a string to work with, then did a regex against it .*W.*. If a regex matches then it will print out the lines that it found matched. If nothing matches then it prints nothing. That's what happened when I typed Cats.
+
+Regetron has a few commands and options as well:
+
+If you give it a file on the command line it will load that: regetron somefile.txt
+If you hit ENTER to make a blank line it will go into "verbose mode" which we'll use heavily in the book. To finish in verbose mode and run the regex just enter a blank line.
+The command !data EXP will run any Python expression (EXP) and and set that as the data. Try !data "LOTS OF ME" * 100 and then try regex .*ME.* to see that it duplicated the line 100 times.
+The command !help will print the available commands.
+!load FILE will load the given file for your data.
+!match toggles whether regex are run in match vs. search mode. We'll cover that later.
+If you have readline installed, then Regetron will give you a readline scrollback and edit feature.
+To exit, just use CTRL-d (or CTRL-z on Windows) and it'll exit.
